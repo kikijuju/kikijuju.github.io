@@ -22,4 +22,10 @@ var store = [{
         "tags": ["컴퓨터구조","운영체제","혼공컴운 연습문제","혼공학습단 11기"],
         "url": "/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/Ch02/",
         "teaser": null
+      },{
+        "title": "[혼공컴운] Ch03 정리",
+        "excerpt":"1. 소스 코드와 명령어 1. 고급 언어와 저급 언어 고급 언어(high-level programming language) 프로그램을 만들 때 컴퓨터가 이해하는 언어가 아닌 사람이 이해하고 작성하기 쉽게 만들어진 언어 C, C++, java, Python.. 저급 언어(low-level programming language) 컴퓨터가 직접 이해하고 실행할 수 있는 언어 ➡ 기계어, 어셈블리어 고급 언어로 작성된 소스 코드가 실행되려면...","categories": ["혼공컴운"],
+        "tags": ["컴퓨터구조","운영체제","혼공컴운 연습문제","혼공학습단 11기"],
+        "url": "/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/Ch03/",
+        "teaser": null
       }]

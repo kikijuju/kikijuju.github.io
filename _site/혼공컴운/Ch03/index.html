@@ -1,0 +1,1125 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[혼공컴운] Ch03 정리 - Juryeong’s Blog</title>
+<meta name="description" content="Ch03 : 명령어">
+
+
+  <meta name="author" content="Kimjuryeong">
+  
+  <meta property="article:author" content="Kimjuryeong">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Juryeong's Blog">
+<meta property="og:title" content="[혼공컴운] Ch03 정리">
+<meta property="og:url" content="http://localhost:4000/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/Ch03/">
+
+
+  <meta property="og:description" content="Ch03 : 명령어">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-01-08T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2024-01-10T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/Ch03/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Juryeong's Blog",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Juryeong's Blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Juryeong's Blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/manggom.png" alt="Kimjuryeong" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Kimjuryeong</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[혼공컴운] Ch03 정리">
+    <meta itemprop="description" content="Ch03 : 명령어">
+    <meta itemprop="datePublished" content="2024-01-08T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-10T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/Ch03/" class="u-url" itemprop="url">[혼공컴운] Ch03 정리
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#1-소스-코드와-명령어">1. 소스 코드와 명령어</a><ul><li><a href="#1-고급-언어와-저급-언어">1. 고급 언어와 저급 언어</a></li><li><a href="#2-컴파일-언어와-인터프리터-언어">2. 컴파일 언어와 인터프리터 언어</a></li><li><a href="#3-목적-파일-vs-실행-파일">3. 목적 파일 vs 실행 파일</a></li><li><a href="#4-확인-문제">4. 확인 문제</a></li></ul></li><li><a href="#2-명령어의-구조">2. 명령어의 구조</a><ul><li><a href="#1-연산-코드와-오퍼랜드">1. 연산 코드와 오퍼랜드</a></li><li><a href="#2-주소-지정-방식">2. 주소 지정 방식</a></li><li><a href="#2-1-대표적인-주소-지정-방식">2-1. 대표적인 주소 지정 방식</a></li><li><a href="#3-스택과-큐">3. 스택과 큐</a></li><li><a href="#4-확인-문제-1">4. 확인 문제</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p><img src="https://velog.velcdn.com/images/ella0106/post/7fc271de-d484-43a2-899a-2687c88eeab2/image.jpg" alt="" /></p>
+
+<h3 id="1-소스-코드와-명령어">1. 소스 코드와 명령어</h3>
+
+<h4 id="1-고급-언어와-저급-언어">1. 고급 언어와 저급 언어</h4>
+
+<ul>
+  <li>
+    <p><strong>고급 언어</strong>(high-level programming language)</p>
+
+    <ul>
+      <li>프로그램을 만들 때 컴퓨터가 이해하는 언어가 아닌 사람이 이해하고 작성하기 쉽게 만들어진 언어</li>
+      <li>C, C++, java, Python..</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>저급 언어</strong>(low-level programming language)</p>
+
+    <ul>
+      <li>
+        <p>컴퓨터가 직접 이해하고 실행할 수 있는 언어 ➡ 기계어, 어셈블리어</p>
+      </li>
+      <li>
+        <p>고급 언어로 작성된 소스 코드가 실행되려면 반드시 저급 언어(명령어)로 변환되어야 한다.</p>
+      </li>
+      <li>
+        <p><strong>기계어</strong>(machine code) : 0과1로 이루어진 명령어 모음</p>
+
+        <ul>
+          <li>이진수로 나열하면 너무 길어지기 때문에 십육진수로 표현하기도 한다.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>어셈블리어</strong>(assembly language) :</p>
+
+        <ul>
+          <li>기계어를 읽기 편한 형태로 번역한 언어</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="2-컴파일-언어와-인터프리터-언어">2. 컴파일 언어와 인터프리터 언어</h4>
+
+<ul>
+  <li>
+    <p>개발자들이 고급 언어로 작성한 소스 코드는 저급 언어로 변환되어 실행된다.</p>
+  </li>
+  <li>
+    <p>고급언어에서 저급언어로 변환되는 방식 ➡ <strong>컴파일 방식</strong>, <strong>인터프리트 방식</strong></p>
+  </li>
+  <li>
+    <p><strong>컴파일 언어</strong>(compile language) : 컴파일러에 의해 소스 코드 전체가 저급 언어로 변환되어 실행되는 고급 언어</p>
+
+    <ul>
+      <li>
+        <p>대표 언어 : C</p>
+      </li>
+      <li>
+        <p><strong>컴파일</strong>(compile) : 컴파일 언어로 작성된 소스 코드의 코드 전체가 저급 언어로 변환되는 과정</p>
+      </li>
+      <li>
+        <p><strong>컴파일러</strong>(compiler) : 컴파일을 수행해 주는 도구</p>
+
+        <ul>
+          <li>코드 내에 오류가 하나라도 있으면 컴파일이 불가능</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>목적코드</strong>(object code) : 컴파일러를 통해 저급 언어로 변환된 코드</p>
+      </li>
+      <li>
+        <p>소스 코드(고급 언어) ➡ 컴파일러(컴파일) ➡ 목적 코드(저급 언어)</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>인터프리터 언어</strong>(interpreter language) : 인터프리터에 의해 소스 코드를 한 줄씩 저급 언어로 변환하여 실행하는 고급 언어</p>
+
+    <ul>
+      <li>대표 언어 Python</li>
+      <li><strong>인터프리터</strong>(interpreter) : 컴퓨터와 대화하듯 한 줄씩 실행
+        <ul>
+          <li>N번째 줄에 문법 오류가 있어도 N-1번째까지는 올바르게 수행</li>
+        </ul>
+      </li>
+      <li>한 줄씩 저급 언어로 해석하며 실행하기 때문에 컴파일 언어보다 느리다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="3-목적-파일-vs-실행-파일">3. 목적 파일 vs 실행 파일</h4>
+
+<ul>
+  <li>
+    <p><strong>목적 파일</strong> : 목적 코드로 이루어진 파일</p>
+  </li>
+  <li>
+    <p><strong>실행 파일</strong> : 실행 코드로 이루어진 파일 ➡ 윈도우의 .exe 확장자를 가진 파일</p>
+  </li>
+  <li>
+    <p><strong>링킹</strong> : 목적코드가 실행 파일이 되기 위해 거치는 작업</p>
+  </li>
+</ul>
+
+<h4 id="4-확인-문제">4. 확인 문제</h4>
+
+<ol>
+  <li>
+    <p>고급 언어가 아닌 것 : 컴파일 언어, 인터프리트 언어</p>
+  </li>
+  <li>
+    <p>일반적으로 컴파일 언어보다 인터프리터 언어가 더 빠릅니다.</p>
+
+    <p>➡ 일반적으로 인터프리터 언어보다 컴파일 언어가 더 빠릅니다.</p>
+  </li>
+</ol>
+
+<h3 id="2-명령어의-구조">2. 명령어의 구조</h3>
+
+<h4 id="1-연산-코드와-오퍼랜드">1. 연산 코드와 오퍼랜드</h4>
+
+<ul>
+  <li>
+    <p><strong>명령어</strong>(instruction) : 연산 코드와 오퍼랜드로 구성</p>
+  </li>
+  <li>
+    <p><strong>오퍼랜드</strong>(<strong>피연산자</strong>) : 연산에 사용할 데이터가 저장된 위치</p>
+
+    <ul>
+      <li>
+        <p><strong>오퍼랜드 필드</strong>(<strong>주소 필드</strong>) : 오퍼랜드가 담기는 영역</p>
+
+        <ul>
+          <li>연산에 사용할 데이터를 직접 명시하기 보다는, 연산에 사용할 데이터가 저장된 위치(레지스터 이름)가  담긴다.</li>
+        </ul>
+      </li>
+      <li>
+        <p>명령어 안에 하나도 없을 수도 있고, 한 개만 있을 수도 있고, 두 개 또는 세 개등 여러게 가능</p>
+
+        <ul>
+          <li>
+            <p><strong>0-주소 명령어</strong> : 오퍼랜드가 하나도 없는 명령어</p>
+          </li>
+          <li>
+            <p><strong>주소 명령어</strong> : 오퍼랜드가 하나인 명령어 , <strong>2-주소 명령어</strong> : 두 개인 명령어, <strong>3-주소 명령어</strong> : 세 개인 명령어</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>연산 코드</strong>(<strong>연산자</strong>) : 명령어가 수행할 연산,</p>
+
+    <ul>
+      <li>
+        <p><strong>연산 코드 필드</strong> : 연산 코드 필드</p>
+      </li>
+      <li>
+        <p>가장 기본적인 연산 코드 유형</p>
+
+        <ul>
+          <li>
+            <p><strong>데이터 전송</strong></p>
+
+            <p>➡ MOVE : 데이터를 옮겨라</p>
+
+            <p>➡ STORE : 메모리에 저장하라</p>
+
+            <p>➡ LOAD(FETCH) : 메모리에서 CPU로 데이터를 가져와라</p>
+
+            <p>➡ PUSH : 스택에 데이터를 저장하라</p>
+
+            <p>➡ POP : 스택의 최상단 데이터를 가져와라</p>
+          </li>
+          <li>
+            <p><strong>산술/논리 연산</strong></p>
+
+            <p>➡ ADD / SUBTRACT / MULTIPLY / DIVIDE : 덧셈 / 뺼셈/ 곱셈/ 나눗셈을 수행하라</p>
+
+            <p>➡ INCREMENT / DECREMENT : 오퍼랜드에 1을 더하라 / 오퍼랜드에 1을 빼라</p>
+
+            <p>➡ AND / OR / NOT : AND / OR / NOT 연산을 수행하라</p>
+
+            <p>➡ COMPAREA : 두 개의 숫자 또는 TRUE / FALSE 값을 비교하라</p>
+          </li>
+          <li>
+            <p><strong>제어 흐름 변경</strong></p>
+
+            <p>➡ JUMP : 특정 주소로 실행 순서를 옮겨라</p>
+
+            <p>➡ CONDITIONAL JUMP : 조건에 부합할 때 특정 주소로 실행 순서를 옮겨라</p>
+
+            <p>➡ HALT : 프로그램의 실행을 멈춰라</p>
+
+            <p>➡ CALL : 되돌아올 주소를 저장한 채 특정 주소로 실행 순서를 옮겨라</p>
+
+            <p>➡ RETURN CALL : CALL을 호출할 때 저장했던 주소로 돌아가라</p>
+          </li>
+          <li>
+            <p><strong>입출력 제어</strong></p>
+
+            <p>➡ READ(INPUT) : 특정 입출력 장치로부터 데이터를 읽어라</p>
+
+            <p>➡ WRITE(OUTPUT) : 특정 입출력 장치로 데이터를 써라</p>
+
+            <p>➡ START IO : 입출력 장치를 시작하라</p>
+
+            <p>➡ TEST IO : 입출력 장치의 상태를 확인하라</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="2-주소-지정-방식">2. 주소 지정 방식</h4>
+
+<ul>
+  <li>
+    <p>오퍼랜드 필드에 메모리나 레지스터의 주소를 담는 이유 ➡ 명령어의 길이 때문이다.</p>
+
+    <p>ex) 명령어 1 = n비트, 연산 코드 필드 = m비트</p>
+
+    <ul>
+      <li>
+        <p>1-주소 명령어</p>
+
+        <p><img width="493" alt="image" src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/f098d1a4-e0b3-4c72-85a6-e2a5083ff5de" /></p>
+
+        <ul>
+          <li>오퍼랜드 필드의 길이 = n-m비트</li>
+          <li>1-주소 명령어에서 표현할 수 있는 데이터 크기 :  2^12 = 4096</li>
+        </ul>
+      </li>
+      <li>
+        <p>2-주소 명령어</p>
+
+        <p><img width="381" alt="image" src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/2ede39a5-be2c-4c61-bad8-547bc51efa2b" /></p>
+
+        <ul>
+          <li>2-주소 명령어에서 표현할 수 있는 데이터 크기 : 2^6 = 64</li>
+        </ul>
+      </li>
+      <li>
+        <p>3-주소 명령어</p>
+
+        <p><img width="408" alt="image" src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/8e7b414e-05c9-4225-b566-c30d230356be" /></p>
+
+        <ul>
+          <li>3-주소 명령어에서 표현할 수 있는 데이터 크기 : 2^4 = 16</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>만약 오퍼랜드 필드 안에 메모리 주소가 담긴다면 표현할 수 있는 데이터의 크기는 하나의 메모리 주소에 저장할 수 있는 공간만큼 커진다.</p>
+
+    <p>Ex) 한 주소에 16비트를 저장할 수 있는 메모리가 있을 때</p>
+
+    <p>​	 ➡ 메모리 안에 데이터를 저장하고, 오퍼랜드 필드 안에 해당 메모리 주소를 명시</p>
+
+    <p>​	 ➡ 표현할 수 있는 정보의 가짓수 : 2^16</p>
+
+    <p>​	<img src="/Users/juryeong/Library/Application Support/typora-user-images/image-20240110203133958.png" alt="image-20240110203133958" style="zoom:50%;" /> 그림 1</p>
+
+    <p>Ex) 오퍼랜드 필드에 메모리 주소가 아닌 레지스터의 이름을 명시할 때</p>
+
+    <p>​	<img width="309" alt="image" src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/a32cc93e-ac9d-4197-b173-a516824a5571" />그림 2</p>
+  </li>
+  <li>
+    <p><strong>유효주소</strong>(effective address) : 연산의 대상이 되는 데이터가 저장된 위치</p>
+
+    <ul>
+      <li>그림1의 유효주소 : 10번지</li>
+      <li>그림2의 유효주소 : 레지스터 R1</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>주소 지정 방식</strong>(addressing mode): 연산에 사용할 데이터의 위치를 찾는 방법(유효 주소를 찾는 방법)</p>
+  </li>
+</ul>
+
+<h4 id="2-1-대표적인-주소-지정-방식">2-1. 대표적인 주소 지정 방식</h4>
+
+<ul>
+  <li>
+    <p><strong>즉시 주소 지정 방식</strong>(immediate addressing mode)</p>
+
+    <ul>
+      <li>연산에 사용할 데이터를 오퍼랜드 필드에 직접 명시하는 방식</li>
+    </ul>
+
+    <p><img width="417" alt="image" src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/83fc3f1e-8230-40a1-9eb0-5929355a6076" /></p>
+
+    <ul>
+      <li>
+        <p><strong>장점</strong></p>
+
+        <ul>
+          <li>연산에 사용할 데이터를 메모리나 레지스터로부터 찾는 과정이 없어, 이하 설명할 주소 지정 방식들보다 빠르다.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>단점</strong></p>
+
+        <ul>
+          <li>표현할 수 있는 데이터의 크기가 작아진다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>직접 주소 지정 방식</strong>(direct addressing mode)</p>
+
+    <ul>
+      <li>오퍼랜드 필드에 유효 주소를 직접적으로 명시하는 방식</li>
+    </ul>
+
+    <p><img width="520" alt="image" src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/5970b3f8-ba42-4fed-b0e7-9ab164c52680" /></p>
+
+    <ul>
+      <li>
+        <p><strong>장점</strong></p>
+
+        <ul>
+          <li>오퍼랜드 필드에서 표현할 수 있는 데이터의 크기는 <strong>즉시 주소 지정 방식</strong>보다 크다</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>단점</strong></p>
+
+        <ul>
+          <li>
+            <p>유효 주소를 표현할 수 있는 범위가 연산 코드의 비트 수만큼 줄어들었다.</p>
+
+            <p>➡ 표현할 수 있는 오퍼랜드 필드의 길이가 연산 코드의 길이만큼 짧아져 표현할 수 있는 유효 주소에 제한이 생길 수 있다.</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>간접 주소 지정 방식</strong>(indirect addressing mode)</p>
+
+    <ul>
+      <li>유효 주소의 주소를 오퍼랜드 필드에 명시하는 방식</li>
+    </ul>
+
+    <p><img width="686" alt="image" src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/8cf734b8-83ae-4fce-98f7-68002ecbbdc6" /></p>
+
+    <ul>
+      <li>
+        <p><strong>장점</strong></p>
+
+        <ul>
+          <li><strong>직접 주소 지정 방식</strong>보다 표현할 수 있는 유효 주소의 범위가 더 넓어졌다.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>단점</strong></p>
+
+        <ul>
+          <li>두 번의 메모리 접근이 필요하기 때문에 앞선 주소 지정 방식들보다 일반적으로 느리다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>레지스터 주소 지정 방식</strong>(register addressing mode)</p>
+
+    <ul>
+      <li>연산에 사용할 데이터를 저장한 레지스터를 오퍼랜드 필드에 직접 명시하는 방식</li>
+    </ul>
+
+    <p><img width="614" alt="image" src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/5644c243-1c52-443f-93e3-54d41d00cd14" /></p>
+
+    <ul>
+      <li>
+        <p>직접 주소 지정 방식과 비슷하다.</p>
+      </li>
+      <li>
+        <p>일반적으로 CPU외부에 있는 메모리에 접근하는 것보다 CPU 내부에 있는 레지스터에 접근하는 것이 더 빠르다.</p>
+      </li>
+      <li>
+        <p><strong>장점</strong></p>
+
+        <ul>
+          <li><strong>직접 주소 지정 방식</strong>보다 빠르게 데이터에 접근할 수 있다.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>단점</strong></p>
+
+        <ul>
+          <li>표현할 수 있는 레지스터 크기에 제한이 생길 수 있다.(<strong>직접 주소 지정 방식</strong>과 유사)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>레지스터 간접 주소 지정 방식</strong>(register indirect addreseing mode)</p>
+
+    <ul>
+      <li>연산에 사용할 데이터를 메모리에 저장하고 그 주소(유효 주소)를 저장한 레지스터를 오퍼랜드 필드에 명시하는 방식</li>
+    </ul>
+
+    <p><img width="745" alt="image" src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/abc36bfa-8a8b-4f94-b864-c3ceba34b089" /></p>
+
+    <ul>
+      <li>
+        <p><strong>장점</strong></p>
+
+        <ul>
+          <li>
+            <p>유효 주소를 찾는 과정이 <strong>간접 주소 지정 방식</strong>과 비슷하지만, 메모리에 접근하는 횟수가 한 번으로 줄어든다.</p>
+          </li>
+          <li>
+            <p><strong>간접 주소 지정 방식</strong>보다 빠르다.</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>정리</strong></p>
+
+    <ul>
+      <li><strong>주소 지정 방식</strong> : 연산에 사용할 데이터를 찾는 방법</li>
+      <li><strong>유효 주소</strong> : 연산에 사용할 데이터가 저장된 위치</li>
+      <li><strong>대표적인 주소 저장 방식</strong>
+        <ul>
+          <li>즉시 주소 저장 방식 : 연산에 사용할 데이터</li>
+          <li>직접 주소 지정 방식 : 유효주소(메모리 주소)</li>
+          <li>간접 주소 지정 방식 : 유효 주소의 주소</li>
+          <li>레지스터 주소 지정 방식 : 유효 주소(레지스터 이름)</li>
+          <li>레지스터 간접 주소 지정 방식 : 유효 주소를 지정할 레지스터</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="3-스택과-큐">3. 스택과 큐</h4>
+
+<ul>
+  <li><strong>스택</strong></li>
+  <li>한쪽 끝이 막혀 있는 저장 공간</li>
+  <li><strong>LIFO</strong> : 후입선출 방식</li>
+  <li><strong>PUSH</strong> : 스택에 새로운 데이터를 저장하는 명령어</li>
+  <li>
+    <p><strong>POP</strong> : 스택에 저장된 데이터를 꺼내는 명령어</p>
+  </li>
+  <li>
+    <p><strong>큐</strong></p>
+
+    <ul>
+      <li>
+        <p>양쪽이 뚫려 있는 저장 공간</p>
+      </li>
+      <li>
+        <p><strong>FIFO</strong> : 선입선출 방식</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="4-확인-문제-1">4. 확인 문제</h4>
+
+<ol>
+  <li>
+    <p>명령어에 대한 설명이 틀린 것</p>
+
+    <ul>
+      <li>
+        <p>연산 코드와 필드에는 메모리 주소만 담을 수 있습니다.</p>
+
+        <p>➡ 연산 코드와 필드에는 메모리 주소 이외에도 다양한 정보를 담을 수 있습니다.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>메모리 <strong>5번지</strong> 속 <strong>100</strong>이라는 값을 CPU로 가져온다.</p>
+  </li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C" class="page__taxonomy-item p-category" rel="tag">운영체제</a><span class="sep">, </span>
+    
+      <a href="/tags/#%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0" class="page__taxonomy-item p-category" rel="tag">컴퓨터구조</a><span class="sep">, </span>
+    
+      <a href="/tags/#%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4-%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C" class="page__taxonomy-item p-category" rel="tag">혼공컴운 연습문제</a><span class="sep">, </span>
+    
+      <a href="/tags/#%ED%98%BC%EA%B3%B5%ED%95%99%EC%8A%B5%EB%8B%A8-11%EA%B8%B0" class="page__taxonomy-item p-category" rel="tag">혼공학습단 11기</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4" class="page__taxonomy-item p-category" rel="tag">혼공컴운</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-10">January 10, 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5B%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4%5D+Ch03+%EC%A0%95%EB%A6%AC%20http%3A%2F%2Flocalhost%3A4000%2F%25ED%2598%25BC%25EA%25B3%25B5%25EC%25BB%25B4%25EC%259A%25B4%2FCh03%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F%25ED%2598%25BC%25EA%25B3%25B5%25EC%25BB%25B4%25EC%259A%25B4%2FCh03%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F%25ED%2598%25BC%25EA%25B3%25B5%25EC%25BB%25B4%25EC%259A%25B4%2FCh03%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/Ch02/" class="pagination--pager" title="[혼공컴운] Ch02 정리
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/Ch02/" rel="permalink">[혼공컴운] Ch02 정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ch02 : 데이터
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/Ch01/" rel="permalink">[혼공컴운] Ch01 정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ch01 : 컴퓨터 구조 시작하기
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/1.week1-CO/" rel="permalink">[혼공컴운] 1주차 미션
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ch01 ~ Ch03
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/1.week1/" rel="permalink">[혼공자바] 1주차 과제
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ch01 ~ Ch03
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Juryeong's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    <script>
+  'use strict';
+
+  (function() {
+    var commentContainer = document.querySelector('#utterances-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://utteranc.es/client.js');
+    script.setAttribute('repo', 'kikijuju/comments');
+    script.setAttribute('issue-term', 'pathname');
+    
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    commentContainer.appendChild(script);
+  })();
+</script>
+
+  
+
+
+
+
+
+  </body>
+</html>
