@@ -1,0 +1,1023 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[혼공자바] Ch04 정리 - Juryeong’s Blog</title>
+<meta name="description" content="Ch04 : 조건문과 반복문">
+
+
+  <meta name="author" content="Kimjuryeong">
+  
+  <meta property="article:author" content="Kimjuryeong">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Juryeong's Blog">
+<meta property="og:title" content="[혼공자바] Ch04 정리">
+<meta property="og:url" content="http://localhost:4000/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/Ch04.week2/">
+
+
+  <meta property="og:description" content="Ch04 : 조건문과 반복문">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-01-12T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2024-01-12T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/Ch04.week2/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Juryeong's Blog",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Juryeong's Blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Juryeong's Blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/manggom.png" alt="Kimjuryeong" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Kimjuryeong</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[혼공자바] Ch04 정리">
+    <meta itemprop="description" content="Ch04 : 조건문과 반복문">
+    <meta itemprop="datePublished" content="2024-01-12T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-12T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/Ch04.week2/" class="u-url" itemprop="url">[혼공자바] Ch04 정리
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#1-조건문-if문-switch문">1. 조건문: if문, switch문</a><ul><li><a href="#1-1-제어문control-statement">1-1. 제어문(control statement)</a></li><li><a href="#1-2-조건문conditional-statement">1-2. 조건문(conditional statement)</a></li><li><a href="#1-3-확인문제">1-3. 확인문제</a></li></ul></li><li><a href="#2-반복문--for문-while문-do-while문">2. 반복문 : for문, while문, do-while문</a><ul><li><a href="#2-1-loop">2-1. loop</a></li><li><a href="#2-2-무한루프infinite-loop">2-2. 무한루프(infinite loop)</a></li><li><a href="#2-3-break문">2-3. break문</a></li><li><a href="#2-4-continue문">2-4. continue문</a></li><li><a href="#2-5-확인문제">2-5. 확인문제</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h3 id="1-조건문-if문-switch문">1. 조건문: if문, switch문</h3>
+
+<h4 id="1-1-제어문control-statement">1-1. 제어문(control statement)</h4>
+
+<ul>
+  <li>실행 흐름을 개발자가 워하는 방향으로 바꿀 수 있도록 해주는 것.
+    <ul>
+      <li><strong>조건문</strong> : if문, switch문</li>
+      <li><strong>반복문</strong> : for문, while문, do-while문</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="1-2-조건문conditional-statement">1-2. 조건문(conditional statement)</h4>
+
+<ul>
+  <li>특정 조건을 만족할 때 코드를 샐항하는 문법
+    <ul>
+      <li><strong>if문</strong> : 괄호 내의 조건식이 참이면 블록 내의 문장을 실행한다.
+        <ul>
+          <li><strong>else문</strong> : if문의 조건식이 거짓이면 블록 내의 문장을 실행한다. 필요 없으면 없어도 됨.</li>
+          <li><strong>else if문</strong> : if문의 조건식이 거짓일 때 실행시킬 코드에 추가 조건을 걸고 싶을 때 사용한다. 필요 없으면 없어도 됨.</li>
+        </ul>
+      </li>
+      <li><strong>switch문</strong> : 변수의 값에 따라 실행문이 결정된다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span>
+  <span class="c1">// 중괄호를 사용하지 않으면 조건식이 참일 때 한 줄만 실행</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a는 양수입니다."</span><span class="o">);</span>
+<span class="k">else</span> <span class="nf">if</span> <span class="o">(</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="o">){</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a는 0입닌다."</span><span class="o">);</span>
+<span class="o">}</span><span class="k">else</span><span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a는 음수입니다."</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="k">switch</span><span class="o">(</span><span class="n">ch</span><span class="o">){</span>
+  <span class="k">case</span> <span class="sc">'a'</span><span class="o">:</span>
+    <span class="c1">// break문이 없기 때문에 블록을 빠져나가지 않고 다음 case문으로 이동</span>
+  <span class="k">case</span> <span class="sc">'b'</span><span class="o">:</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"ch는 a혹은 b입니다."</span><span class="o">);</span> <span class="c1">// a일 경우에도 출력됨.</span>
+    <span class="k">break</span><span class="o">;</span>
+  <span class="k">case</span> <span class="sc">'c'</span><span class="o">:</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"ch는 c입니다."</span><span class="o">);</span>
+    <span class="k">break</span><span class="o">;</span>
+  <span class="k">default</span><span class="o">:</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a도 b도 c도 아닙니다."</span><span class="o">);</span>
+    <span class="k">break</span><span class="o">;</span> <span class="c1">// break를 하지 않아도 이 블록을 빠져나갈 수 있음.</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="1-3-확인문제">1-3. 확인문제</h4>
+
+<ol>
+  <li>
+    <p>조건문의 종류</p>
+
+    <ul>
+      <li>조건문 : if문, switch문</li>
+    </ul>
+  </li>
+  <li>
+    <p>조건문을 설명한 것 중 맞는 것 O표, 틀린 것 X표 하세요.</p>
+
+    <ul>
+      <li>
+        <p>if문은 조건식의 결과에 따라 실행 흐름을 달리할 수 있다.(X)</p>
+
+        <p>➡️ if문이 아니라 switch문</p>
+      </li>
+      <li>
+        <p>if문은 조건식이 true이면 블록을 실행하고 false이면 블록을 실행하지 않는다.(0)</p>
+      </li>
+      <li>
+        <p>if문의 블록 내부에는 또 다른 if문을 사용할 수 있다.(0)</p>
+      </li>
+      <li>
+        <p>switch문에서 사용할 수 있는 변수의 타입은 int만 가능하다.(x)</p>
+
+        <p>➡️ char 타입도 가능하다.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>코드를 실행했을 때 출력되는 내용</p>
+
+    <ul>
+      <li>B입니다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>코드를 실행했을 때 출력되는 내용</p>
+
+    <ul>
+      <li>
+        <p>우수 회원 혜택을 받으실 수 있습니다.</p>
+
+        <p>일반 회원 혜택을 받으실 수 있습니다.</p>
+
+        <p>감사합니다.</p>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="2-반복문--for문-while문-do-while문">2. 반복문 : for문, while문, do-while문</h3>
+
+<h4 id="2-1-loop">2-1. loop</h4>
+
+<ul>
+  <li>
+    <p>특정 조건을 만족하는 동안 반복해서 실행하는 문법</p>
+
+    <ul>
+      <li><strong>for문</strong> : 반복 횟수가 정해진 경우에 주로 사용</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//for문 예시</span>
+<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+    <span class="c1">//0부터 n-1까지 i를 증가시키며 코드 실행(n회 반복)</span>
+</code></pre></div>    </div>
+
+    <ul>
+      <li><strong>while문</strong> : 반복 횟수를 모를 때 주로 사용</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//while문 예시</span>
+<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
+    <span class="n">result</span> <span class="o">*=</span> <span class="mi">3</span><span class="o">;</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">result</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="o">)</span> <span class="c1">//이 조건을 만족시켜야 반복문 종료</span>
+        <span class="k">break</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <ul>
+      <li><strong>do-while문</strong> : 조건 만족 여부와 상관없이 코드를 먼저 실행하고, 그 다음 루프부터 조건을 검사</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//do-while문 예시</span>
+<span class="k">do</span><span class="o">{</span>
+   <span class="n">printf</span><span class="o">(</span><span class="s">"출력됩니다."</span><span class="o">);</span>
+<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span><span class="c1">//1회만 출력</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="2-2-무한루프infinite-loop">2-2. 무한루프(infinite loop)</h4>
+
+<ul>
+  <li>무한히 반복을 하고 싶거나 정해진 횟수 없이 일정한 조건을 충족하면 빠져나오게 하고 싶을 때 사용하는 것</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//for문을 사용한 무한 루프</span>
+<span class="k">for</span><span class="o">(;;){</span>
+    <span class="c1">//반복하고 싶은 코드</span>
+<span class="o">}</span>
+
+<span class="c1">//while문을 사용한 무한 루프</span>
+<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
+    <span class="c1">//반복하고 싶은 코드</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="2-3-break문">2-3. break문</h4>
+
+<ul>
+  <li>for문, while문, do-while문 내부에서 실행되면 반복을 취소한다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//이중 for문일 때 break로 바깥쪽 for문까지 종료 예시</span>
+<span class="nc">Outter</span> <span class="o">:</span> <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span> <span class="c1">// 바깥 반복문에 이름(라벨) 붙이기</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">j</span><span class="o">++){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">j</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>
+            <span class="k">break</span> <span class="nc">Outter</span><span class="o">;</span> <span class="c1">// break Outter(라벨)로 바깥쪽 반복문까지 종료</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="2-4-continue문">2-4. continue문</h4>
+
+<ul>
+  <li>for문, while문, do-while문 내부에서 실행되면 증감식 또는 조건식으로 돌아간다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//continue를 사용한 for문 예시</span>
+<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">continue</span><span class="o">;</span> <span class="c1">// 홀수인 경우 다시 조건식으로 이동</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="2-5-확인문제">2-5. 확인문제</h4>
+
+<ol>
+  <li>
+    <p>반복문의 종류</p>
+
+    <ul>
+      <li>반복문 : for문, while문, do-while문</li>
+    </ul>
+  </li>
+  <li>
+    <p>for문을 이용해서 1~100까지 정수 중에 3의 배수의 총합을 구하는 코드 작성하기</p>
+
+    <p>**<코드>**</코드></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+         
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"3의 배수의 총 합 : "</span> <span class="o">+</span> <span class="n">sum</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>**<결과>**</결과></p>
+
+    <p><img src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/3dce7c87-6d6b-4e80-b760-332b84b59ed6" alt="스크린샷 2024-01-12 오후 1 08 16" /></p>
+  </li>
+  <li>
+    <p>while문과 Math.random() 메소드를 이용해서 2개의 주사위를 던졌을 때 나오는 눈을(눈1, 눈2) 형태로 출력하고,
+눈의 합이 5가 아니면 계속 주사위를 던지고, 합이 5이면 실행을 멈추는 코드 작성하기</p>
+
+    <p>눈의 합이 5가되는 조합 (1,4), (4, 1), (2, 3), (3, 2)</p>
+
+    <p>**<코드>**</코드></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+   
+        <span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
+            <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()</span> <span class="o">*</span> <span class="mi">6</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+            <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()</span> <span class="o">*</span> <span class="mi">6</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+   
+            <span class="k">if</span> <span class="o">(</span><span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span> <span class="o">!=</span> <span class="mi">5</span><span class="o">){</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"("</span><span class="o">+</span><span class="n">num1</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">num2</span> <span class="o">+</span> <span class="s">")"</span><span class="o">);</span>
+            <span class="o">}</span><span class="k">else</span><span class="o">{</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"("</span><span class="o">+</span><span class="n">num1</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">num2</span> <span class="o">+</span> <span class="s">")"</span><span class="o">);</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"눈의 합 = 5, 프로그램 종료."</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>**<결과>**</결과></p>
+
+    <p><img src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/832346f4-03ce-4aef-931b-2921ac119bd2" alt="image" /></p>
+  </li>
+  <li>
+    <p>중첩 for문을 이용하여 방정식 4x+5y = 60의 모든 해를 구해서 (x, y) 형태로 출력하기</p>
+
+    <p>단, x와 y는 10 이하의 자연수</p>
+
+    <p>**<코드>**</코드></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="o">;</span> <span class="n">j</span><span class="o">++){</span>
+                <span class="k">if</span> <span class="o">(</span><span class="mi">4</span><span class="o">*</span><span class="n">i</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">j</span> <span class="o">==</span> <span class="mi">60</span><span class="o">){</span>
+                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"("</span><span class="o">+</span><span class="n">i</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="n">j</span> <span class="o">+</span> <span class="s">")"</span><span class="o">);</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>**<결과>**</결과></p>
+
+    <p><img src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/b074620c-65ac-43fa-8e60-3bea25e50c63" alt="image" /></p>
+  </li>
+  <li>
+    <p>for문을 이용해서 *을 출력하는 코드 작성하기(p.161 참고)</p>
+
+    <p>**<코드>**</코드></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span><span class="o">++){</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"*"</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>​	**<결과>**</결과></p>
+
+<p>​	<img src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/d4ff9d2d-84b9-4386-bfb1-7337872440ee" alt="image" /></p>
+
+<ol>
+  <li>
+    <p>for문을 이용해서 *을 출력하는 코드 작성하기(p.161 참고)</p>
+
+    <p>**<코드>**</코드></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="o">-</span><span class="n">i</span><span class="o">;</span> <span class="n">j</span><span class="o">++){</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">" "</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"*"</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>**<결과>**</결과></p>
+
+    <p><img src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/083a0e44-f306-4639-97b3-089f5aca6e43" alt="image" /></p>
+  </li>
+  <li>
+    <p>while문과 Scanner를 이용해서 키보드로 입력된 데이터로 예금, 출금, 조회, 종료 기능을 제공하는 코드를 작성하기.</p>
+
+    <p>(Scanner의 next() 사용)</p>
+
+    <p>**<코드>**</코드></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+   
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">boolean</span> <span class="n">run</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">balance</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="nc">Scanner</span> <span class="n">scaaner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+   
+        <span class="k">while</span><span class="o">(</span><span class="n">run</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"____________________________________"</span><span class="o">);</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"1.예금 | 2.출금 | 3.잔고 | 4.종료"</span><span class="o">);</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"____________________________________"</span><span class="o">);</span>
+   
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"선택&gt; "</span><span class="o">);</span>
+            <span class="kt">int</span> <span class="n">choice</span> <span class="o">=</span> <span class="n">scaaner</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+   
+            <span class="k">if</span> <span class="o">(</span><span class="n">choice</span> <span class="o">==</span> <span class="mi">4</span><span class="o">){</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"프로그램 종료"</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="o">}</span>
+            <span class="k">switch</span> <span class="o">(</span><span class="n">choice</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"예금액&gt; "</span><span class="o">);</span>
+                    <span class="kt">int</span> <span class="n">credit</span> <span class="o">=</span> <span class="n">scaaner</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+                    <span class="n">balance</span> <span class="o">+=</span> <span class="n">credit</span><span class="o">;</span>
+                    <span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"출금액&gt; "</span><span class="o">);</span>
+                    <span class="kt">int</span> <span class="n">withdraw</span> <span class="o">=</span> <span class="n">scaaner</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+                    <span class="n">balance</span> <span class="o">-=</span> <span class="n">withdraw</span><span class="o">;</span>
+                    <span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"잔고&gt;"</span> <span class="o">+</span> <span class="n">balance</span><span class="o">);</span>
+                    <span class="k">break</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>​	**<결과>**</결과></p>
+
+<p>​	<img src="https://github.com/kikijuju/kikijuju.github.io/assets/114811246/9d07174f-6a84-4404-94f6-870f48e11bfd" alt="image" /></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#java" class="page__taxonomy-item p-category" rel="tag">Java</a><span class="sep">, </span>
+    
+      <a href="/tags/#%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94" class="page__taxonomy-item p-category" rel="tag">혼공자바</a><span class="sep">, </span>
+    
+      <a href="/tags/#%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94-%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C" class="page__taxonomy-item p-category" rel="tag">혼공자바 연습문제</a><span class="sep">, </span>
+    
+      <a href="/tags/#%ED%98%BC%EA%B3%B5%ED%95%99%EC%8A%B5%EB%8B%A8-11%EA%B8%B0" class="page__taxonomy-item p-category" rel="tag">혼공학습단 11기</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94" class="page__taxonomy-item p-category" rel="tag">혼공자바</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-12">January 12, 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5B%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94%5D+Ch04+%EC%A0%95%EB%A6%AC%20http%3A%2F%2Flocalhost%3A4000%2F%25ED%2598%25BC%25EA%25B3%25B5%25EC%259E%2590%25EB%25B0%2594%2FCh04.week2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F%25ED%2598%25BC%25EA%25B3%25B5%25EC%259E%2590%25EB%25B0%2594%2FCh04.week2%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F%25ED%2598%25BC%25EA%25B3%25B5%25EC%259E%2590%25EB%25B0%2594%2FCh04.week2%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/week2/" class="pagination--pager" title="[혼공자바] 2주차 미션
+">이전</a>
+    
+    
+      <a href="/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/Ch05.week2/" class="pagination--pager" title="[혼공자바] Ch05 정리
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/week2/" rel="permalink">[혼공컴운] 2주차 미션
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ch04 ~ Ch05
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/Ch05.week2/" rel="permalink">[혼공자바] Ch05 정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ch05 : 참조 타입
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/week2/" rel="permalink">[혼공자바] 2주차 미션
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">ch04~ch05
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/Ch03/" rel="permalink">[혼공컴운] Ch03 정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ch03 : 명령어
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Juryeong's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    <script>
+  'use strict';
+
+  (function() {
+    var commentContainer = document.querySelector('#utterances-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://utteranc.es/client.js');
+    script.setAttribute('repo', 'kikijuju/comments');
+    script.setAttribute('issue-term', 'pathname');
+    
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    commentContainer.appendChild(script);
+  })();
+</script>
+
+  
+
+
+
+
+
+  </body>
+</html>

@@ -28,4 +28,28 @@ var store = [{
         "tags": ["컴퓨터구조","운영체제","혼공컴운 연습문제","혼공학습단 11기"],
         "url": "/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/Ch03/",
         "teaser": null
+      },{
+        "title": "[혼공자바] 2주차 미션",
+        "excerpt":"1. p.142 switch문실행 후 결과 화면 캡쳐(기본미션) **** public class Main { public static void main(String[] args) { int num = (int) (Math.random() * 6) + 1; switch (num) { case 1: System.out.println(\"1번이 나왔습니다.\"); break; case 2: System.out.println(\"2번이 나왔습니다.\"); break; case 3: System.out.println(\"3번이 나왔습니다.\"); break; case 4: System.out.println(\"4번이 나왔습니다.\"); break;...","categories": ["혼공자바"],
+        "tags": ["Java","혼공자바","혼공자바 연습문제","혼공학습단 11기"],
+        "url": "/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/week2/",
+        "teaser": null
+      },{
+        "title": "[혼공자바] Ch04 정리",
+        "excerpt":"1. 조건문: if문, switch문 1-1. 제어문(control statement) 실행 흐름을 개발자가 워하는 방향으로 바꿀 수 있도록 해주는 것. 조건문 : if문, switch문 반복문 : for문, while문, do-while문 1-2. 조건문(conditional statement) 특정 조건을 만족할 때 코드를 샐항하는 문법 if문 : 괄호 내의 조건식이 참이면 블록 내의 문장을 실행한다. else문 : if문의 조건식이...","categories": ["혼공자바"],
+        "tags": ["Java","혼공자바","혼공자바 연습문제","혼공학습단 11기"],
+        "url": "/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/Ch04.week2/",
+        "teaser": null
+      },{
+        "title": "[혼공자바] Ch05 정리",
+        "excerpt":"1. 참조 타입과 참조 변수 1-1. 기본 타입과 참조 타입 기본 타입 변수 : 실제 값을 변수 안에 저장 byte, char, short, int, long, float, double, boolean ex) int age = 25; 참조 타입 변수 : 메모리의 번지를 변수 안에 저장 배열, 열거 클래스, 인터 페이스 변수 ex) String name...","categories": ["혼공자바"],
+        "tags": ["Java","혼공자바","혼공자바 연습문제","혼공학습단 11기"],
+        "url": "/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/Ch05.week2/",
+        "teaser": null
+      },{
+        "title": "[혼공컴운] 2주차 미션",
+        "excerpt":"1. P.125 문제 2, P.155 문제 4 풀기(기본 미션) 1-1. 설명에 맞는 레지스터 찾기 플래그 레지스터 : 연산 결과 혹은 CPU 상태에서 대한 부가 정보를 저장하는 레지스터 프로그램 카운터 : 메모리에서 가져올 명렁어의 주소를 저장하는 레지스터 범용 레지스터 : 데이터와 주소를 모두 저장할 수 있는 레지스터 명령어 레지스터 : 해석할...","categories": ["혼공컴운"],
+        "tags": ["컴퓨터구조","운영체제","혼공컴운 연습문제","혼공학습단 11기"],
+        "url": "/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/week2/",
+        "teaser": null
       }]

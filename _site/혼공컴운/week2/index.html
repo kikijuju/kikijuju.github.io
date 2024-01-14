@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[혼공컴운] 1주차 미션 - Juryeong’s Blog</title>
-<meta name="description" content="Ch01 ~ Ch03">
+<!-- begin _includes/seo.html --><title>[혼공컴운] 2주차 미션 - Juryeong’s Blog</title>
+<meta name="description" content="Ch04 ~ Ch05">
 
 
   <meta name="author" content="Kimjuryeong">
@@ -22,32 +22,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Juryeong's Blog">
-<meta property="og:title" content="[혼공컴운] 1주차 미션">
-<meta property="og:url" content="http://localhost:4000/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/1.week1-CO/">
+<meta property="og:title" content="[혼공컴운] 2주차 미션">
+<meta property="og:url" content="http://localhost:4000/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/week2/">
 
 
-  <meta property="og:description" content="Ch01 ~ Ch03">
-
-
-
+  <meta property="og:description" content="Ch04 ~ Ch05">
 
 
 
 
-  <meta property="article:published_time" content="2024-01-07T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2024-01-07T00:00:00+09:00">
+  <meta property="article:published_time" content="2024-01-14T00:00:00+09:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2024-01-14T00:00:00+09:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/1.week1-CO/">
+
+<link rel="canonical" href="http://localhost:4000/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/week2/">
 
 
 
@@ -258,16 +258,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[혼공컴운] 1주차 미션">
-    <meta itemprop="description" content="Ch01 ~ Ch03">
-    <meta itemprop="datePublished" content="2024-01-07T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-01-07T00:00:00+09:00">
+    <meta itemprop="headline" content="[혼공컴운] 2주차 미션">
+    <meta itemprop="description" content="Ch04 ~ Ch05">
+    <meta itemprop="datePublished" content="2024-01-14T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-14T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/1.week1-CO/" class="u-url" itemprop="url">[혼공컴운] 1주차 미션
+            <a href="http://localhost:4000/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/week2/" class="u-url" itemprop="url">[혼공컴운] 2주차 미션
 </a>
           </h1>
           
@@ -299,43 +299,45 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#1-p51-65-확인-문제-3번-풀고-인증하기기본-미션">1. P.51, 65 확인 문제 3번 풀고 인증하기(기본 미션)</a></li><li><a href="#2-p100-스택과-큐의-개념을-정리하기선택미션">2. P100. 스택과 큐의 개념을 정리하기(선택미션)</a><ul><li><a href="#1-스택">1. 스택</a></li><li><a href="#2-큐">2. 큐</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#1-p125-문제-2-p155-문제-4-풀기기본-미션">1. P.125 문제 2, P.155 문제 4 풀기(기본 미션)</a></li><li><a href="#2-코어--스레드-멀티-코어--멀티-스레드-정리선택미션">2. 코어 &amp; 스레드, 멀티 코어 &amp; 멀티 스레드 정리(선택미션)</a></li></ul>
 
             </nav>
           </aside>
         
-        <h3 id="1-p51-65-확인-문제-3번-풀고-인증하기기본-미션">1. P.51, 65 확인 문제 3번 풀고 인증하기(기본 미션)</h3>
+        <h3 id="1-p125-문제-2-p155-문제-4-풀기기본-미션">1. P.125 문제 2, P.155 문제 4 풀기(기본 미션)</h3>
 
-<ol>
-  <li>
-    <p>프로그램이 실행되려면 반드시 (<strong>메모리</strong>)에 저장되어 있어야 합니다.</p>
-  </li>
-  <li>
-    <p>1101 ➡️ 0010 ➡️ 0011</p>
+<p>1-1. 설명에 맞는 레지스터 찾기</p>
+
+<ul>
+  <li><strong>플래그 레지스터</strong> : 연산 결과 혹은 CPU 상태에서 대한 부가 정보를 저장하는 레지스터</li>
+  <li><strong>프로그램 카운터</strong> : 메모리에서 가져올 명렁어의 주소를 저장하는 레지스터</li>
+  <li><strong>범용 레지스터</strong> : 데이터와 주소를 모두 저장할 수 있는 레지스터</li>
+  <li><strong>명령어 레지스터</strong> : 해석할 명령어를 저장하는 레지스터</li>
+</ul>
+
+<p>1-2</p>
+
+<ul>
+  <li>빈칸에 알맞은 용어 - <strong>코어</strong></li>
+</ul>
+
+<h3 id="2-코어--스레드-멀티-코어--멀티-스레드-정리선택미션">2. 코어 &amp; 스레드, 멀티 코어 &amp; 멀티 스레드 정리(선택미션)</h3>
+
+<ul>
+  <li><strong>코어</strong> : CPU 내에서 명령어를 실행하는 부품</li>
+  <li><strong>스레드</strong> : 실행 흐름의 단위로, 하드웨어적 스레드와 소프트웨어적 스레드로 구분
     <ul>
-      <li>1101(2)을 음수로 표현한 값은 <strong>0011</strong>입니다.</li>
+      <li><strong>하드웨어적 스레드</strong> : CPU에서 사용되는 스레드</li>
+      <li><strong>소프트위어적 스레드</strong> : 프로그램에서 사용되는 스레드</li>
     </ul>
   </li>
-</ol>
-
-<h3 id="2-p100-스택과-큐의-개념을-정리하기선택미션">2. P100. 스택과 큐의 개념을 정리하기(선택미션)</h3>
-
-<h4 id="1-스택">1. 스택</h4>
-
-<ul>
-  <li>한쪽 끝이 막혀 있는 저장 공간</li>
-  <li><strong>LIFO</strong> : 후입선출 방식</li>
-  <li>PUSH : 스택에 새로운 데이터를 저장하는 명령어</li>
-  <li>POP : 스택에 저장된 데이터를 꺼내는 명령어</li>
+  <li><strong>멀티 코어 프로세서</strong> : 여러 개의 코어를 표함하고 있는 CPU
+    <ul>
+      <li>단일코어보다 처리 속도가 빠르다.</li>
+    </ul>
+  </li>
+  <li><strong>멀티스레드 프로세서</strong> : 멀티스레드 CPU라고도 하며, 하나의 코어로 여러 명령어를 동시에 처리하는 CPU</li>
 </ul>
-
-<h4 id="2-큐">2. 큐</h4>
-
-<ul>
-  <li>양쪽이 뚫려 있는 저장 공간</li>
-  <li><strong>FIFO</strong> : 선입선출 방식</li>
-</ul>
-
 
         
       </section>
@@ -383,7 +385,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-07">January 7, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-14">January 14, 2024</time></p>
 
       </footer>
 
@@ -392,23 +394,22 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5B%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4%5D+1%EC%A3%BC%EC%B0%A8+%EB%AF%B8%EC%85%98%20http%3A%2F%2Flocalhost%3A4000%2F%25ED%2598%25BC%25EA%25B3%25B5%25EC%25BB%25B4%25EC%259A%25B4%2F1.week1-CO%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5B%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4%5D+2%EC%A3%BC%EC%B0%A8+%EB%AF%B8%EC%85%98%20http%3A%2F%2Flocalhost%3A4000%2F%25ED%2598%25BC%25EA%25B3%25B5%25EC%25BB%25B4%25EC%259A%25B4%2Fweek2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F%25ED%2598%25BC%25EA%25B3%25B5%25EC%25BB%25B4%25EC%259A%25B4%2F1.week1-CO%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F%25ED%2598%25BC%25EA%25B3%25B5%25EC%25BB%25B4%25EC%259A%25B4%2Fweek2%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F%25ED%2598%25BC%25EA%25B3%25B5%25EC%25BB%25B4%25EC%259A%25B4%2F1.week1-CO%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F%25ED%2598%25BC%25EA%25B3%25B5%25EC%25BB%25B4%25EC%259A%25B4%2Fweek2%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/1.week1/" class="pagination--pager" title="[혼공자바] 1주차 과제
+      <a href="/%ED%98%BC%EA%B3%B5%EC%9E%90%EB%B0%94/Ch05.week2/" class="pagination--pager" title="[혼공자바] Ch05 정리
 ">이전</a>
     
     
-      <a href="/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/Ch01/" class="pagination--pager" title="[혼공컴운] Ch01 정리
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -422,46 +423,6 @@
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/week2/" rel="permalink">[혼공컴운] 2주차 미션
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Ch04 ~ Ch05
-</p>
-  </article>
-</div>
-
         
           
 
@@ -530,7 +491,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 분 소요
+          4 분 소요
         
       </span>
     
@@ -578,6 +539,46 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">ch04~ch05
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4/Ch03/" rel="permalink">[혼공컴운] Ch03 정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Ch03 : 명령어
 </p>
   </article>
 </div>
